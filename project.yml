@@ -1,0 +1,49 @@
+name: AetherSeek
+options:
+  bundleIdPrefix: com.aethernative
+  developmentLanguage: en
+  deploymentTarget:
+    macOS: '26.0'
+settings:
+  base:
+    ARCHS: arm64
+    ONLY_ACTIVE_ARCH: YES
+    SWIFT_VERSION: '6.0'
+    MACOSX_DEPLOYMENT_TARGET: '26.0'
+    DEVELOPMENT_TEAM: 5984KQD4D7
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: 'Developer ID Application'
+    ENABLE_HARDENED_RUNTIME: YES
+    SWIFT_EMIT_LOC_STRINGS: YES
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+    MARKETING_VERSION: 0.1.0
+    CURRENT_PROJECT_VERSION: 2026102501
+  configs:
+    Release:
+      CODE_SIGN_INJECT_BASE_ENTITLEMENTS: NO
+      OTHER_CODE_SIGN_FLAGS: --timestamp
+packages:
+  AetherSeekCore:
+    path: .
+targets:
+  AetherSeek:
+    type: application
+    platform: macOS
+    sources:
+      - Sources/App
+      - path: Resources
+        buildPhase: resources
+        excludes: ['*.entitlements']
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.aethernative.AetherSeek
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: AetherSeek
+        INFOPLIST_KEY_LSUIElement: YES
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.productivity
+        INFOPLIST_KEY_NSHumanReadableCopyright: '© 2026 AetherNative'
+        CODE_SIGN_ENTITLEMENTS: Resources/App.entitlements
+        COMBINE_HIDPI_IMAGES: YES
+    dependencies:
+      - package: AetherSeekCore
+        product: AetherSeekCore
