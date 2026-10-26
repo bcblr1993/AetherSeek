@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs><clipPath id="lens"><circle cx="444" cy="444" r="273"/></clipPath></defs>
+  <g clip-path="url(#lens)">
+    <circle cx="444" cy="444" r="273" fill="#312E81"/>
+    <path d="M150 380 C300 280 460 450 740 310 L740 420 C470 560 320 390 150 490 Z" fill="#2DD4BF"/>
+    <path d="M150 470 C320 380 480 560 740 440 L740 560 C480 670 320 500 150 590 Z" fill="#A78BFA"/>
+    <path d="M150 580 C300 510 480 650 740 570 L740 760 L150 760 Z" fill="#38BDF8"/>
+    <circle cx="560" cy="300" r="14" fill="#F8FAFC" opacity="0.85"/>
+    <circle cx="610" cy="350" r="8" fill="#F8FAFC" opacity="0.7"/>
+  </g>
+</svg>
